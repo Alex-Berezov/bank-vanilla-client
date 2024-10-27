@@ -1,0 +1,36 @@
+@use './styles';
+
+input,
+button,
+body {
+	font-family: styles.$font;
+}
+
+body {
+	background-color: #1b1d1f;
+	color: styles.$white;
+	font-size: 17px;
+	line-height: 1.6;
+}
+
+input {
+	font-size: 16px;
+	background-color: transparent;
+	color: styles.$white;
+
+	&::placeholder {
+		color: styles.$text-gray;
+	}
+}
+
+a {
+	color: styles.$white;
+	text-decoration: none;
+	transition: border-color 0.3s ease-in-out;
+	border-bottom: 1px solid transparent;
+	animation: drawing 0.4s;
+
+	&:hover {
+		border-color: styles.$primary;
+	}
+}
