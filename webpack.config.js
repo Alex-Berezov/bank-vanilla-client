@@ -31,8 +31,8 @@ const plugins = [
 
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
-	entry: './index.js',
 	mode,
+	entry: './index.js',
 	output: {
 		filename: isDev ? '[name].js' : '[name].[contenthash].js',
 		path: path.resolve(__dirname, 'dist'),
@@ -131,11 +131,7 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(png|jpe?g|gif|svg)$/i,
-				type: 'asset/resource'
-			},
-			{
-				test: /\.(woff|woff2|ttf|eot)$/i,
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
 				type: 'asset/resource'
 			},
 			{

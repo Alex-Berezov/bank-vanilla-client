@@ -1,16 +1,17 @@
 import { BaseScreen } from '@/core/component/baseScreen.component'
+import renderService from '@/core/services/render.service'
+
+import cls from './home.module.scss'
+
+import template from './home.component.html'
 
 export class Home extends BaseScreen {
 	constructor() {
-		super({ title: 'Home' }) // Устанавливаем заголовок для Home
+		super({ title: 'Home' })
 	}
 
 	render() {
-		return `
-            <div>
-                <h1>Home</h1>
-                <p>Welcome to the Home page.</p>
-            </div>
-        `
+		const element = renderService.htmlToElement(template, [], cls)
+		return element.outerHTML
 	}
 }
